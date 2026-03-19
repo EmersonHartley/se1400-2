@@ -142,7 +142,7 @@ main img {
   padding-left: 2rem;
 }
 #bluebar {
-  background-color: pink;
+  background-color: #003058;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
 }
