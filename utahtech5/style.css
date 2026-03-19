@@ -88,7 +88,7 @@ main {
 }
 #homehero {
   height: 300px;
-  background-image: url('homehero.jpg');
+  background-image: url('../utahtech4/homehero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -96,7 +96,7 @@ main {
 
 #studenthero {
   height: 300px;
-  background-image: url(studenthero.jpg);
+  background-image: url('../utahtech4/studenthero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -104,7 +104,7 @@ main {
 
 #facultyhero {
   height: 300px;
-  background-image: url(facultyhero.jpg);
+  background-image: url('../utahtech4/facultyhero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
