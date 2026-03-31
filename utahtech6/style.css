@@ -158,6 +158,15 @@ main img {
   grid-row: 2 / 3;
   grid-column: 1 / -1;
 }
+<<<<<<< HEAD
+form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 200px 1fr;
+  gap:.75rem;
+  width:100%;
+}
+=======
 form {
   display: grid;
   grid-template-rows: auto;
@@ -185,6 +194,7 @@ label {
   grid-column: 2 / 3;
 }
 
+>>>>>>> 1d1ef069cc800ad6d5e3fc6d868143c5df003fa1
 @media only screen and (max-width: 1100px) {
   #wrapper {
     grid-template-columns: minmax (0px, 1fr) repeat(6, minmax(0, 150px)) minmax(0px, 1fr);
