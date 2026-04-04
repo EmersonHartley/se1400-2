@@ -1,122 +1,94 @@
-* {
-  box-sizing: border-box;
+#wrapper {
+  display:grid;
+  background-color:black;
+  grid-auto-rows: minmax(0, auto); 
+  grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
 }
-body {
-  margin:0;
-  background-color: #FFFFFF;
-  color: #666666;
-  font-family: Verdana, Arial, sans-serif;
-  background: linear-gradient(to bottom, #eeeeee, #ffffff);
-  background-attachment: fixed;
-}
-
 header {
-  background-color: #003058;
-  color: #FFFFFF;
-  font-family: Georgia, serif;
-  grid-row: 1 / 2;
-  grid-column: 2/ -2;
-}
-header a {
-  color:#FFFFFF;
-  text-decoration: none;
+    grid-row:1 / 2;
+    grid-column: 2 / -2;
+    font-family:'Ariel Narrow Bold';
+    text-align: center;
+    background-color: black;
+    padding: 40px;
+    font-size: larger;
 }
 header h1 {
-  line-height: 140%;
-  padding: .5rem;
-  background-image: url(utahtechlogo.svg);
-  background-position: right;
-  background-repeat: no-repeat;
-  padding-left: 1em;
-  background-origin: content-box;
-  margin: 0;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-left: 1em;
+    background-origin: content-box;
+    margin: 0;
+    color: pink;
 }
-
-nav {
-
+nav{ 
   font-weight: bold;
   background-color: #424242;
   padding: 0;
   margin: 0;
   position:sticky;
   top: 0;
+
 }
-nav ul{
-  margin: 0;
+.hero {
+  height: 200px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+    grid-row: 5 / 6;
+    grid-column: 2 / -2;
+    text-align: center;
+
+}
+footer{
+    grid-row: 6 / 7;
+    grid-column: 1 / -1;
+    background-color: gray;
+}
+.flex-menu{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+#homehero {
+  height: 300px;
+  background-image: url("images/vexworlds.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  grid-row: 3 / 5;
+  grid-column: 1 / -1;
+}
+li{
+    padding: 1px 0px;
+}
+a{
+    color:white;
+    text-decoration: none;
+    font-family:'Ariel Narrow Bold';
+    font-weight:bold;
+}
+nav ul {
+    margin: 0;
   padding: 0;
   display: flex;
   flex-flow: row nowrap;
   list-style-type: none;
-
-}
-nav ul li{
-  width: 100%;
 }
 
-h2 {
-  color: #424242;
-  font-family: Georgia, serif;
-}
-
-dt {
-  color: #003058;
-  font-weight: bold;
-}
-
-.ut {
-  color: #BA1C21;
-  font-weight: bold;
-}
-
-footer {
-  font-size: .70rem;
-  font-style: italic;
-  text-align: center;
-  padding: 1rem;
-}
-
-#wrapper {
-  display:grid;
-  grid-auto-rows: minmax(0, auto); 
-  grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);}
-h3 {
-  color: #003058;
-}
-main {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-#homehero {
-  height: 300px;
-  background-image: url('../utahtech4/homehero.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#studenthero {
-  height: 300px;
-  background-image: url('../utahtech4/studenthero.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#facultyhero {
-  height: 300px;
-  background-image: url('../utahtech4/facultyhero.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 nav a {
   text-decoration: none;
   color: #FFFFFF;
   padding: 1rem 0rem;
   display: block;
   text-align: center;
-
-
+}
+nav ul li{
+  width: 100%;
 }
 nav a:hover{
   background-color: #BA1C21;
@@ -125,69 +97,91 @@ nav {
   grid-row: 2 / 3;
   grid-column: 2 / -2;
 }
-#homehero, #studenthero, #facultyhero {
-  grid-row: 3 / 4;
-  grid-column: 1 / -1;
-}
-main {
-  grid-row: 4 / 5;
-  grid-column: 2 / -2; 
-}
-footer {
-  grid-row: 5 / 6;
-  grid-column: 2 / -2;
-}
-main img {
-  float:right;
-  padding-left: 2rem;
-}
-#bluebar {
-  background-color: #003058;
-  grid-row: 1 / 2;
-  grid-column: 1 / -1;
-}
-#greybar {
-  background-color:#424242;
-  grid-row: 2 / 3;
-  grid-column: 1 / -1;
-}
-@media only screen and (max-width: 1100px) {
+@media screen and (max-width: 992px) {
   #wrapper {
-    grid-template-columns: minmax (0px, 1fr) repeat(6, minmax(0, 150px)) minmax(0px, 1fr);
+    grid-template-columns: 1fr 768px 1fr;
   }
-}
-@media only screen and (max-width: 900px) {
-  nav {
-    grid-column: 1 / 5;
-    grid-row: 2 / 3;
-    position: static;
 
+  header,
+  nav,
+  #homehero,
+  main {
+    grid-column: 2 / 3;
   }
-  nav ul{
-    flex-flow: column nowrap;
+
+  nav ul {
+    flex-flow: row nowrap;
   }
-  #homehero, #studenthero, #facultyhero{
-    grid-row: 2 / 3;
-    grid-column: 5 / 8;
-    height:auto;
+
+  #homehero {
+    grid-row: 3 / 4;
+    height: 250px;
   }
-  main img {
-    float: none;
-    width: 100%;
-    height: auto;
-    padding-left:0;
+
+  main {
+    grid-row: 4 / 5;
   }
-}
-  @media only screen and (max-width: 600px) {
-  header h1 {
-    background-image:none;
-    text-align:center;
-  }
-  nav {
-    grid-row:2 / 3;
+
+  footer {
+    grid-row: 5 / 6;
     grid-column: 1 / -1;
   }
-  #homehero, #studenthero, #facultyhero {
-    display:none;
+}
+@media screen and (max-width: 768px) {
+  #wrapper {
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto auto auto auto;
   }
+
+  header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
   }
+
+  nav {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    position: static;
+    background-color: #424242;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  #homehero {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  main {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    text-align: center;
+  }
+
+  footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+  }
+}
